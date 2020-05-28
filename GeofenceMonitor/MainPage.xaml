@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GeofenceMonitor.MainPage">
+
+    <StackLayout Margin="20,35,20,20">
+        <Label HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" TextColor="DeepSkyBlue" Text="Geofence Monitoring" />
+        <Label Margin="0,35,0,0" HorizontalOptions="Start" FontSize="Subtitle" Text="User ID" />
+        <Entry Placeholder="Enter user id"
+               MaxLength="100"
+               TextChanged="OnEditorTextChanged"
+               Completed="OnEditorCompleted"
+        />
+        <Label Margin="0,20,0,0" HorizontalOptions="Start" FontSize="Subtitle" Text="Log View" />
+        <Editor x:Name="logview" HeightRequest="340" IsEnabled="False"/>
+        <Button Margin="0,20,0,0" BackgroundColor="CornflowerBlue" Text="Start" Clicked="OnStartButtonClicked" />
+        <Button Margin="0,10,0,35" BackgroundColor="PaleVioletRed" Text="Stop" Clicked="OnStopButtonClicked" />
+    </StackLayout>
+
+</ContentPage>
